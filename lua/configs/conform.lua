@@ -10,7 +10,6 @@ local options = {
     sql = { "sql_formatter" },
     templ = { "templ" },
     ts = { "prettierd" },
-    -- vue = { "prettierd" },
     vue = { "eslint_d", "stylelint_lsp", lsp_format = "first" },
   },
 

@@ -26,6 +26,7 @@ M.mason = {
     "stylelint-lsp",
     "prettierd",
     "eslint-lsp",
+    "rust-analyzer",
 
     "ruby-lsp",
   },

@@ -4,11 +4,14 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<leader>X", function()
   require("nvchad.tabufline").closeAllBufs()
 end, { desc = "Close all buffers" })
+
+-- Editor
+map("n", "c.", "viw\"0p", { noremap = true, silent = true, desc = "Replace word under cursor" })
 
 -- Persistance
 map("n", "<leader>qs", function()
@@ -33,6 +36,7 @@ map("n", "<leader>fa", function()
 end, { desc = "stop Persistence => session won't be saved on exit" })
 
 -- Copilot Chat
+map("n", "<leader>cd", ":Copilot disable", { noremap = true, silent = true })
 map("n", "<leader>a", function()
   require("CopilotChat").toggle()
 end, { desc = "CopilotChat Toggle" })
